@@ -1,5 +1,80 @@
-.button:hover{
-    background-color: rgb(241, 7, 140) !important; 
-    color: aqua;
-    cursor: pointer;
+.notification-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.notification-card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  width: 650px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-box {
+  flex: 1;
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1.4px solid #999;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+.input-box:focus {
+  border-color: #7b2ff7;
+  box-shadow: 0 0 5px rgba(123, 47, 247, 0.5);
+  outline: none;
+}
+
+.select-box {
+  height: 38px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1.4px solid #999;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.select-box:focus {
+  border-color: #7b2ff7;
+  outline: none;
+}
+
+.send-btn {
+  width: 120px;
+  padding: 9px 0;
+  background: linear-gradient(135deg, #ff00f7, #b300ff);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 15px;
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(146, 21, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }

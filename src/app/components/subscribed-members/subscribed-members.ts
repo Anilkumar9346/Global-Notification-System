@@ -41,18 +41,18 @@ export class SubscribedMembers implements OnInit{
       image:"https://people.zoho.in/inspironlabs/viewPhoto?filename=1147345000000683192",
       team:"Development"
     },
+      {
+      name:"Madhav Sharma",
+      empId:"178",
+      image:"https://people.zoho.in/inspironlabs/viewPhoto?erecno=49748000004248011&mode=2&avatarid=21",
+      team:"QA"
+    },
     {
       name:"Debashish Naik",
       empId:"198",
       role:"Software Engineer",
       image:"https://people.zoho.in/inspironlabs/viewPhoto?erecno=49748000000207062&mode=2&avatarid=57",
       team:"Development"
-    },
-      {
-      name:"Madhav Sharma",
-      empId:"178",
-      image:"https://people.zoho.in/inspironlabs/viewPhoto?erecno=49748000004248011&mode=2&avatarid=21",
-      team:"QA"
     },
     {
       name:"Sourabh",

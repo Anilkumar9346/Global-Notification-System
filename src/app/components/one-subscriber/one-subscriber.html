@@ -3,7 +3,7 @@
 
   <div class="header">
     <p class="title">Notifications</p>
-
+    <div class="" [ngClass] = "showNotificationRadio() == true ? 'dot' : '' "></div>
     <img 
       [src]="showNotifications 
         ? 'https://cdn-icons-png.flaticon.com/128/130/130906.png' 
@@ -34,7 +34,12 @@
       <p class="profile-name">{{subscriber.name}}</p>
       <p class="profile-detail">Emp ID : {{subscriber.empId}}</p>
       <p class="profile-detail">Role : {{subscriber.role}}</p>
-      <p class="profile-detail">Team : {{subscriber.team}}</p>
+      <p class="profile-detail" 
+        [style] = "{
+            color: subscriber.team == 'Development' ? 'blue' : '#FB8C00' 
+        }" >Team : {{subscriber.team}}
+      </p>
+      <!-- for the above styles (;) should not be given at the property value end -->
     </div>
   </div>
 </div>

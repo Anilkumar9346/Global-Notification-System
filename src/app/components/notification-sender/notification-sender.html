@@ -1,4 +1,4 @@
-<div style="display: flex;justify-content: center;align-items: center;">
+<!-- <div style="display: flex;justify-content: center;align-items: center;">
     <input placeholder="Enter the notication"  type="text" [value]="notification" (input) = "onChaneNotification($event)" style="height: 27px;font-size: 20px; border: 1.2px solid black;"/>
     <div style="margin-left: 10px;">
         To 
@@ -9,4 +9,39 @@
     </div>   
     <button  class="button"   (click)="sendNotifiacation()" style="color: white; border: 0px solid black; width: 120px; background-color: rgb(255, 0, 247); border-radius: 5px; padding: 9px; margin-left: 10px; margin-right: 10px;">Send Notification</button> 
                            
+</div> -->
+
+
+
+
+
+
+
+
+
+<div class="notification-container">
+  <div class="notification-card">
+
+    <h2 class="title">Send Notification</h2>
+
+    <div class="form-row">
+      <input
+        type="text"
+        placeholder="Enter the notification"
+        [value]="notification"
+        (input)="onChaneNotification($event)"
+        class="input-box"
+      />
+
+      <select (change)="onChangeTeam($event)" class="select-box">
+        <option value="Development">Development Team</option>
+        <option value="QA">QA Team</option>
+      </select>
+
+      <button class="send-btn" (click)="sendNotifiacation()">
+        Send
+      </button>
+    </div>
+
+  </div>
 </div>
