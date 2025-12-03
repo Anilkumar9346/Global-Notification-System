@@ -20,7 +20,7 @@ export class OneSubscriber implements OnInit {
   allNotifications:any[] = [];
 
   allDevelopementTeamNotifications:any[] = [];
-  
+
   allQATeamNotifications:any[] = [];
 
   developmentLatestNotification:string = "";
@@ -36,14 +36,14 @@ export class OneSubscriber implements OnInit {
 
       if(this.subscriber.team == "Development"){
         console.log("Subscriber is a Developer....");
-        this.notificationService.developmentTeamNotificationSubject.subscribe(notification => {
+        this.notificationService.developmentTeamNotificationSubject$.subscribe(notification => {
             console.log("notification for ", this.subscriber.name , notification);
             console.log("allNotification for ", this.subscriber.name , this.allNotifications);
             this.allDevelopementTeamNotifications.push(notification);
             this.allNotifications.push(notification);
           })
         
-        this.notificationService.developmentTeamLatestNotificationBehSub.subscribe(notification => {
+        this.notificationService.developmentTeamLatestNotificationBehSub$.subscribe(notification => {
             console.log("latestnotification for ", this.subscriber.name , notification);
 
             this.latestNotification = notification
@@ -54,13 +54,13 @@ export class OneSubscriber implements OnInit {
       }
       else{
         console.log("Subscriber is a Tester....");
-        this.notificationService.qATeamNotificationSubject.subscribe(notification => {
+        this.notificationService.qATeamNotificationSubject$.subscribe(notification => {
             console.log("notification for ", this.subscriber.name , notification);
             this.allQATeamNotifications.push(notification);
             this.allNotifications.push(notification);
           })
 
-        this.notificationService.qATeamLatestNotificationBehSub.subscribe(notification => {
+        this.notificationService.qATeamLatestNotificationBehSub$.subscribe(notification => {
             console.log("latestnotification for ", this.subscriber.name , notification);
 
             this.latestNotification = notification

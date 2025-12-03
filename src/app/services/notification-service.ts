@@ -9,9 +9,13 @@ export class NotificationService {
 
   //latestNotificationBehSubject = new BehaviorSubject<string>("No Notifications Yet");  //initial Value necessary
 
-  developmentTeamNotificationSubject = new Subject<string>();
+  private developmentTeamNotificationSubject = new Subject<string>();
 
-  qATeamNotificationSubject = new Subject<string>();
+  private qATeamNotificationSubject = new Subject<string>();
+
+  private developmentTeamLatestNotificationBehSub = new BehaviorSubject<string>("No Notifications Yet");
+
+  private qATeamLatestNotificationBehSub = new BehaviorSubject<string>("No Notifications Yet");
 
   //developmentNotification$ = this.developmentTeamNotificationSubject.asObservable();
   //qATeamNotification$ = this.notificationSubject.asObservable();
@@ -20,9 +24,16 @@ export class NotificationService {
 
   //latestNotifiacation$ = this.latestNotificationBehSubject.asObservable();
 
-  developmentTeamLatestNotificationBehSub = new BehaviorSubject<string>("No Notifications Yet");
 
-  qATeamLatestNotificationBehSub = new BehaviorSubject<string>("No Notifications Yet");
+  developmentTeamNotificationSubject$ = this.developmentTeamNotificationSubject.asObservable();
+
+  qATeamNotificationSubject$ = this.qATeamNotificationSubject.asObservable();
+
+  //Converting BEhSub to Observables..
+  
+  developmentTeamLatestNotificationBehSub$ = this.developmentTeamLatestNotificationBehSub.asObservable();
+
+  qATeamLatestNotificationBehSub$ = this.qATeamLatestNotificationBehSub.asObservable();
 
   sendNotification(notification : string | any | undefined , team:string) {
 
