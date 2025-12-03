@@ -1,0 +1,83 @@
+<div class="notification-card">
+
+  <!-- Header -->
+  <div class="header">
+    <p class="title">Notifications</p>
+
+    <img 
+      [src]="showNotifications 
+        ? 'https://cdn-icons-png.flaticon.com/128/130/130906.png' 
+        : 'https://cdn-icons-png.flaticon.com/128/19024/19024510.png'" 
+      width="20" 
+      height="20"  
+      alt="arrow" 
+      class="arrow-icon"
+      (click)="onClickArrow()"
+    />
+  </div>
+
+  <!-- Notification List -->
+  <div *ngIf="showNotifications" class="notification-list">
+    <p class="latest">
+      {{ subscriber.team == 'Development' ? developmentLatestNotification : qALatestNotification }}
+    </p>
+
+    <ul>
+      <li *ngFor="let notification of allNotifications">
+        {{ notification }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="profile-section">
+    <img [src]="subscriber.image" alt="profile" class="profile-img"/>
+    <div class="profile-info">
+      <p class="profile-name">{{subscriber.name}}</p>
+      <p class="profile-detail">Emp ID : {{subscriber.empId}}</p>
+      <p class="profile-detail">Role : {{subscriber.role}}</p>
+      <p class="profile-detail">Team : {{subscriber.team}}</p>
+    </div>
+  </div>
+</div>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           <!-- <div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="margin: 0;">Notifications</p>
+                    <img [src] = "showNotifications ? 'https://cdn-icons-png.flaticon.com/128/130/130906.png' :  'https://cdn-icons-png.flaticon.com/128/19024/19024510.png' " width="20" height="20px"  alt="arrow" (click)="onClickArrow()"/>
+                </div>
+                <div *ngIf="showNotifications">
+                        <p>{{ subscriber.team == "Development" ? developmentLatestNotification :qALatestNotification }}</p>
+                        <ul>
+                            <li *ngFor="let notification of allNotifications">
+                                {{notification}}
+                            </li>
+                        </ul>
+                </div>
+                <div style="display: flex; ">
+                    <img [src]="subscriber.image" alt="profile" style="height: 40px;width: 40px;border-radius: 50%;"/>
+                    <p>{{subscriber.name}}</p>
+                </div>
+                <p>Emp ID : {{subscriber.empId}}</p>
+                <p>Role : {{subscriber.role}}</p>
+            </div> -->

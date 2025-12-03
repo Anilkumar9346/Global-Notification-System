@@ -1,0 +1,12 @@
+<div>
+    <h1 style="text-align: center; color: deeppink;">ALL Employees</h1>
+    <ul style="list-style-type: none; display: flex; flex-wrap: wrap;">
+        <li *ngFor = "let subscriber of currentSubscribedMembers" style="height: auto;   width: auto;  margin: 10px; padding: 10px; border-radius: 9px;">
+            <app-one-subscriber [subscriber] = "subscriber"></app-one-subscriber>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- box-shadow: rgba(0,0,0,0.19) 0px 10px 20px, rgba(0,0,0,0.23)0px 6px 12px; -->
