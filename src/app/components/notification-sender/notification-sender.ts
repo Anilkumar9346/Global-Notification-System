@@ -8,7 +8,7 @@ import { NotificationService } from '../../services/notification-service';
   styleUrl: './notification-sender.scss',
 })
 export class NotificationSender implements OnInit{
-  notification:string="";
+  notification:string = "";
 
   team:string = "Development";
 
@@ -18,10 +18,10 @@ export class NotificationSender implements OnInit{
 
     console.log("sendNotifiacation Started in NotificationSender");
 
-    console.log("notification" , this.notification)
+    console.log("notification" , this.notification);
     this.notificationService.sendNotification(this.notification , this.team);
-    this.notification="";
-    
+    this.notification = "";
+
     console.log("sendNotifiacation Ended in NotificationSender")
     
 
@@ -35,6 +35,7 @@ export class NotificationSender implements OnInit{
     console.log("onChangeTeam Started")
     this.team = (target as HTMLInputElement).value
   }
+  
   ngOnInit(): void {
       console.log("ngOnInint Started in NotificationSender")
 

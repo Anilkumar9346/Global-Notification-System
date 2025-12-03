@@ -20,7 +20,7 @@ export class OneSubscriber implements OnInit {
   allNotifications:any[] = [];
 
   allDevelopementTeamNotifications:any[] = [];
-
+  
   allQATeamNotifications:any[] = [];
 
   developmentLatestNotification:string = "";

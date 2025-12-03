@@ -1,6 +1,6 @@
 <div class="notification-card">
 
-  <!-- Header -->
+
   <div class="header">
     <p class="title">Notifications</p>
 
@@ -16,7 +16,6 @@
     />
   </div>
 
-  <!-- Notification List -->
   <div *ngIf="showNotifications" class="notification-list">
     <p class="latest">
       {{ subscriber.team == 'Development' ? developmentLatestNotification : qALatestNotification }}
@@ -29,7 +28,6 @@
     </ul>
   </div>
 
-  <!-- Profile Section -->
   <div class="profile-section">
     <img [src]="subscriber.image" alt="profile" class="profile-img"/>
     <div class="profile-info">
